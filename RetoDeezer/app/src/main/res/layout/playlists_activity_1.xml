@@ -19,11 +19,10 @@
         android:ems="10"
         android:hint="Buscar Playlist"
         android:inputType="textPersonName"
-        android:text="   "
-        android:textAlignment="inherit"
-        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textColor="#5020C2"
         android:textColorHighlight="#5020C2"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#8B5020C2"
         android:textColorLink="#5020C2"
         android:textCursorDrawable="@drawable/color_cursor"
         app:layout_constraintEnd_toStartOf="@+id/searchButton"
@@ -57,7 +56,7 @@
 
     <TextView
         android:id="@+id/editText"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="#009688"
         android:ems="10"

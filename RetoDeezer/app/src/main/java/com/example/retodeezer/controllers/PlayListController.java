@@ -101,8 +101,8 @@ public class PlayListController implements HTTPSWebUtilDomi.OnResponseListener {
 
                         if(playList.getDescription().equals("")){
                             activity.getDescriptionPlaylist().setText("Sin descripción");
-                        }if(playList.getDescription().length()>=60){
-                            activity.getDescriptionPlaylist().setText(playList.getDescription().substring(0,50)+"...");
+                        }if(playList.getDescription().length()>=40){
+                            activity.getDescriptionPlaylist().setText(playList.getDescription().substring(0,40)+"...");
                         }else{
                             activity.getDescriptionPlaylist().setText(playList.getDescription());
                         }

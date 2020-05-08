@@ -28,7 +28,7 @@ public class TrackController implements View.OnClickListener{
             activity.runOnUiThread(
                     ()->{
 
-                        activity.getNameTrack().setText(track.getTitle());
+                        activity.getNameTrack().setText(track.getTitle_short());
                         activity.getNameArtist().setText(track.getArtist().getName());
                         activity.getNameAlbum().setText(track.getAlbum().getTitle());
                         String time= timeTrack(track.getDuration());
@@ -47,9 +47,21 @@ public class TrackController implements View.OnClickListener{
         hor=num/3600;
         min=(num-(3600*hor))/60;
         seg=num-((hor*3600)+(min*60));
+        String min2="00";
+        String seg2="00";
+        if(min<10&&min>0&&hor>0) {
+            min2 = "0" + min;
+        }else{
+            min2=min+"";
+        }
+        if(seg<10&&seg>0) {
+            seg2= "0" + min;
+        }else{
+            seg2=seg+"";
+        }
         if(hor!=0)
-            return hor+":"+min+":"+seg;
-        return min+":"+seg;
+            return hor+":"+min2+":"+seg2;
+        return min2+":"+seg2;
     }
 
     @Override
